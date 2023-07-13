@@ -9,12 +9,13 @@ class SearchBar extends React.Component {
 
     handleChange = (event) => { this.setState({ searchTerm: event.target.value})}
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
         const { searchTerm } = this.state;
         const { onFormSubmit } = this.props;
 
         onFormSubmit(searchTerm);
-
+        
+        e.preventDefault();
     }
 
     render(){
@@ -29,5 +30,3 @@ class SearchBar extends React.Component {
 }
 export default SearchBar
 
-//We need this as a class based component because we are managing state in there
-// State modifiers, modify state based on search component
