@@ -4,9 +4,15 @@ import { Grid } from '@mui/material'
 
 import VideoItem from './VideoItem'
 
-const VideoList = ({ videos }) => {
-    const listOfVideos = videos.map((video, id) => <VideoItem key={id} video={video}/>)
-    return listOfVideos
+
+
+const VideoList = ({ videos, onVideoSelect }) => {
+    const listOfVideos = videos.map((video, id) => <VideoItem onVideoSelect={onVideoSelect} key={id} video={video}/>)
+    return (
+        <Grid container spacing={6}>
+            {listOfVideos}
+        </Grid>
+    )
 }
 
 export default VideoList

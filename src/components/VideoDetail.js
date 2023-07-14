@@ -24,5 +24,3 @@ const VideoDetail = ({ video }) => {
 }
 
 export default VideoDetail
-
-// 

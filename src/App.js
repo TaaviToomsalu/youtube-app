@@ -11,6 +11,15 @@ class App extends React.Component {
         videos: [],
         selectedVideo: null,
     }
+
+    componentDidMount() {
+        this.handleSubmit('Funny cats')
+    }
+
+    onVideoSelect = (video) => {
+        this.setState({ selectedVideo: video })
+    }
+
     handleSubmit = async (searchTerm) => {
         try {
             const response = await youtube.get('search', { 
@@ -42,7 +51,7 @@ class App extends React.Component {
                             <VideoDetail video={selectedVideo}/>
                         </Grid>
                         <Grid item xs={4}>
-                            <VideoList videos={videos}/>
+                            <VideoList videos={videos} onVideoSelect={this.onVideoSelect}/>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -50,9 +59,5 @@ class App extends React.Component {
         )
     }
 }
-
-
-
-
 
 export default App;
