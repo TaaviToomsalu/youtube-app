@@ -13,12 +13,12 @@ class App extends React.Component {
     }
     handleSubmit = async (searchTerm) => {
         try {
-            const response = await youtube.get('https://www.googleapis.com/youtube/v3/search', { 
+            const response = await youtube.get('search', { 
                 params: {
                     part: 'snippet',
-                    maxResults: 5,
+                    maxResults: '5',
                     key: 'AIzaSyAwePyRcd4FIphWlv00OAZ2EQiZJxtf2m8',
-                    q: searchTerm,
+                    q: searchTerm
                 }
             })
 

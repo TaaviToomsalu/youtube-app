@@ -10,5 +10,3 @@ const VideoList = ({ videos }) => {
 }
 
 export default VideoList
-
-//1:05
