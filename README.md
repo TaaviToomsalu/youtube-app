@@ -2,6 +2,7 @@ Youtube clone app
 
 
 npm i
+
 npm start
 
 
