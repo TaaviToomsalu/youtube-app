@@ -13,7 +13,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.handleSubmit('Funny cats')
+        this.handleSubmit('Dark knight')
     }
 
     onVideoSelect = (video) => {
